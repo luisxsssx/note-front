@@ -1,0 +1,16 @@
+body {
+    background-color: #e9ecef;
+    font-family: "Roboto", monospace;
+    font-size: x-large;
+}
+
+.eslogan {
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-small {
+    width: 5%;
+    height: auto;
+}
