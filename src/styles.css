@@ -1,7 +1,10 @@
 body {
-    background-color: #e9ecef;
+
     font-family: "Roboto", monospace;
     font-size: x-large;
+    background-color: #f8f9fa;
+    /*background: -webkit-linear-gradient(top, rgba(28,37,65), rgba(11,19,43));
+    background: linear-gradient(to bottom, rgba(28,37,65), rgba(11,19,43));*/
 }
 
 .eslogan {
@@ -15,8 +18,18 @@ body {
     height: auto;
 }
 
-@media (min-width: 1025px) {
-    .h-custom-2 {
-        height: 100%;
-    }
+.form-login {
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-login h2 {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
+
+.auth {
+    background-color: #343a40;
 }
