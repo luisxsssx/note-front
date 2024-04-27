@@ -1,92 +1,82 @@
 import NavBar from "../navbar";
-import logoNote from "../../../dist/logotwo.png";
 import "../../styles.css";
 
-export default function Register(){
-    return (
-      <NavBar>
-        <div className="container-lg justify-content">
-          <div className="row justify-content-center align-items-center">
-            <div className="col-sm-6">
-              <div className="d-flex flex-row ps-4 pt-4">
-                <i
-                  className="fas fa-crow fa-3x me-3"
-                  style={{ color: "#709085" }}
-                ></i>
-              </div>
-
-              <div className="d-flex flex-column justify-content-center h-custom-2 w-75 pt-2">
-                <h3
-                  className="fw-normal mb-3 ps-5 pb-3 text-center"
-                  style={{ letterSpacing: "1px" }}
-                >
-                  Register
-                </h3>
+export default function Register() {
+  return (
+    <NavBar>
+      <div className="container-fluid">
+        <div className="row justify-content-center align-items-center vh-50">
+          <div className="col-12">
+            <div
+              className="card text-white my-4 mx-auto auth"
+              style={{ maxWidth: "450px", borderRadius: "1rem" }}
+            >
+              <div className="card-body p-5 d-flex flex-column align-items-center w-100">
+                <h2 className="fw-bold mb-2 text-uppercase p-2">Register</h2>
 
                 <div className="mb-4 mx-5 w-100">
+                  <label
+                    htmlFor="formControlEmail"
+                    className="form-label text-white"
+                  >
+                    Firtsname
+                  </label>
                   <input
                     type="text"
-                    className="form-control form-control-lg"
-                    id="firstname"
-                    placeholder="Firstname"
+                    className="form-control"
+                    id="formControlFirstname"
                   />
                 </div>
 
                 <div className="mb-4 mx-5 w-100">
+                  <label className="form-label text-white">Lastname</label>
                   <input
                     type="text"
-                    className="form-control form-control-lg"
-                    id="lastname"
-                    placeholder="Lastname"
+                    className="form-control"
+                    id="formControlLastname"
                   />
                 </div>
 
                 <div className="mb-4 mx-5 w-100">
+                  <label className="form-label text-white">Email</label>
                   <input
                     type="email"
-                    className="form-control form-control-lg"
-                    id="email"
-                    placeholder="Email address"
+                    className="form-control"
+                    id="formControlEmail"
+                    placeholder="name@example.com"
                   />
                 </div>
 
                 <div className="mb-4 mx-5 w-100">
+                  <label className="form-label text-white">Username</label>
                   <input
                     type="text"
-                    className="form-control form-control-lg"
-                    id="username"
-                    placeholder="Username"
+                    className="form-control"
+                    id="formControlUsername"
                   />
                 </div>
 
                 <div className="mb-4 mx-5 w-100">
+                  <label className="form-label text-white">Password</label>
                   <input
                     type="password"
-                    className="form-control form-control-lg"
-                    id="password"
-                    placeholder="Password"
+                    className="form-control"
+                    id="formControlPassword"
                   />
                 </div>
 
                 <button
-                  className="btn btn-info mb-4 px-5 mx-5 w-100"
                   type="button"
+                  className="btn btn-outline-light mx-2 px-5 mb-4"
+                  style={{ borderRadius: "2rem" }}
                 >
                   Register
                 </button>
               </div>
             </div>
-
-            <div className="col-sm-5 d-none d-sm-block px-0">
-              <img
-                src={logoNote}
-                alt="Login image"
-                className="w-100"
-                style={{ objectFit: "cover", objectPosition: "left" }}
-              />
-            </div>
           </div>
         </div>
-      </NavBar>
-    );
+      </div>
+    </NavBar>
+  );
 }
