@@ -1,7 +1,12 @@
+import { useState } from "react";
+import { loginUser } from "./getToken";
 import NavBar from "../nav/navbar";
 import "../../styles.css";
 
 export default function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <NavBar>
       <div className="container-fluid">
@@ -15,12 +20,13 @@ export default function Login() {
                 <h2 className="fw-bold mb-2 text-uppercase p-2">Login</h2>
 
                 <div className="mb-4 mx-5 w-100">
-                  <label className="form-label text-white">Email address</label>
+                  <label className="form-label text-white">Username</label>
                   <input
-                    type="email"
+                    type="text"
                     className="form-control"
-                    id="formControlEmail"
-                    placeholder="name@example.com"
+                    id="formControlUsername"
+                    value={username}
+                    onChange={(u) => setUsername(u.target.value)}
                   />
                 </div>
 
@@ -30,6 +36,8 @@ export default function Login() {
                     type="password"
                     className="form-control"
                     id="formControlPassword"
+                    value={password}
+                    onChange={(p) => setPassword(p.target.value)}
                   />
                 </div>
 
@@ -37,6 +45,7 @@ export default function Login() {
                   type="button"
                   className="btn btn-outline-light mx-2 px-5 mb-4"
                   style={{ borderRadius: "2rem" }}
+                  onClick={() => loginUser(username, password)}
                 >
                   Login
                 </button>
@@ -47,5 +56,4 @@ export default function Login() {
       </div>
     </NavBar>
   );
-
 }

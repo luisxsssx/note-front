@@ -1,7 +1,15 @@
 import NavBar from "../nav/navbar";
 import "../../styles.css";
+import { useState } from "react";
+import { registerUser } from "./getToken";
 
 export default function Register() {
+  const [first_name, setFirst_name] = useState("");
+  const [last_name, setLast_name] = useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <NavBar>
       <div className="container-fluid">
@@ -25,6 +33,8 @@ export default function Register() {
                     type="text"
                     className="form-control"
                     id="formControlFirstname"
+                    value={first_name}
+                    onChange={(f) => setFirst_name(f.target.value)}
                   />
                 </div>
 
@@ -34,6 +44,8 @@ export default function Register() {
                     type="text"
                     className="form-control"
                     id="formControlLastname"
+                    value={last_name}
+                    onChange={(l) => setLast_name(l.target.value)}
                   />
                 </div>
 
@@ -44,6 +56,8 @@ export default function Register() {
                     className="form-control"
                     id="formControlEmail"
                     placeholder="name@example.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
@@ -53,6 +67,8 @@ export default function Register() {
                     type="text"
                     className="form-control"
                     id="formControlUsername"
+                    value={username}
+                    onChange={(u) => setUsername(u.target.value)}
                   />
                 </div>
 
@@ -62,6 +78,8 @@ export default function Register() {
                     type="password"
                     className="form-control"
                     id="formControlPassword"
+                    value={password}
+                    onChange={(p) => setPassword(p.target.value)}
                   />
                 </div>
 
@@ -69,6 +87,15 @@ export default function Register() {
                   type="button"
                   className="btn btn-outline-light mx-2 px-5 mb-4"
                   style={{ borderRadius: "2rem" }}
+                  onClick={() =>
+                    registerUser({
+                      first_name,
+                      last_name,
+                      email,
+                      username,
+                      password,
+                    })
+                  }
                 >
                   Register
                 </button>
