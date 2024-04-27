@@ -1,10 +1,10 @@
-import "../styles.css";
-import NavBar from "./navbar";
+import "../styles.css"
+import NavBar from "./nav/navbar";
 
 export default function LandingPage() {
   return (
     <NavBar>
-      <div className="text-center">
+      <div className="text-center m-3">
         <h2 className="eslogan">
           CAPTURA TUS IDEAS EN CUALQUIER MOMENTO, <br /> EN CUALQUIER LUGAR
         </h2>

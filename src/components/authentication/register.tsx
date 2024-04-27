@@ -1,4 +1,4 @@
-import NavBar from "../navbar";
+import NavBar from "../nav/navbar";
 import "../../styles.css";
 
 export default function Register() {
