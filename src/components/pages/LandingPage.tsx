@@ -1,5 +1,5 @@
-import "../styles.css"
-import NavBar from "./nav/navbar";
+import "../../styles.css"
+import NavBar from "../layout/Navbar";
 
 export default function LandingPage() {
   return (

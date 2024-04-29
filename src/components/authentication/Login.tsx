@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { loginUser } from "./getToken";
-import NavBar from "../nav/navbar";
+import { loginUser } from "../../services/authService";
+import NavBar from "../layout/Navbar";
 import "../../styles.css";
 
 export default function Login() {

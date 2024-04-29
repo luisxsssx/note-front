@@ -1,7 +1,7 @@
-import NavBar from "../nav/navbar";
+import NavBar from "../layout/Navbar";
 import "../../styles.css";
 import { useState } from "react";
-import { registerUser } from "./getToken";
+import { registerUser } from "../../services/authService";
 
 export default function Register() {
   const [first_name, setFirst_name] = useState("");
