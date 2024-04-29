@@ -1,4 +1,4 @@
-import HomeNavbar from "./nav/homeNavbar";
+import HomeNavbar from "../layout/HomeNavbar";
 
 export default function HomePage(){
     return(
