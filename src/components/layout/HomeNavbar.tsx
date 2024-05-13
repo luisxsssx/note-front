@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../../src/styles.css"
-import SettingsIcon  from '../../assets/settings.svg';
+import "../../../src/styles.css";
+import SettingsIcon from "../../assets/settings.svg";
+import Account from "../../assets/account.svg";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -21,12 +22,16 @@ export default function HomeNavbar({ children }: NavbarProps) {
               />
             </div>
             <div className="ms-auto d-flex">
-              <Link className="nav-link fs-4 me-4" to={""}>
-                Home
-              </Link>
-              <Link to="">
-              <img src={SettingsIcon} alt="Settings" />
-              </Link>
+              <div>
+                <Link to="" className="m-2">
+                  <img src={SettingsIcon} alt="Settings" />
+                </Link>
+              </div>
+              <div>
+                <Link to="">
+                  <img src={Account} alt="Settings" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
