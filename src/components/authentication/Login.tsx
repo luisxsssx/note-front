@@ -45,7 +45,7 @@ export default function Login() {
                   type="button"
                   className="btn btn-outline-light mx-2 px-5 mb-4"
                   style={{ borderRadius: "2rem" }}
-                  onClick={() => loginUser(username, password)}
+                  onClick={() => loginUser({username, password})}
                 >
                   Login
                 </button>

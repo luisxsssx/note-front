@@ -43,7 +43,7 @@ export async function loginUser(loginData: LoginData) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ loginData }),
+      body: JSON.stringify( loginData ),
     });
 
     const data = await response.json();
